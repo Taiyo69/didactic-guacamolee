@@ -1,8 +1,8 @@
-#Recuperar peliculas
+###Recuperar peliculas
 https://upgradedumbrella-pnba--1234--7dbe22a9.local-corp.webcontainer.io/movies
 
-#Recuperar peliculas por ID
-https://upgradedumbrella-pnba--1234--7dbe22a9.local-corp.webcontainer.io/movies/1
+###Recuperar peliculas por ID
+https://upgradedumbrella-pnba--1234--7dbe22a9.local-corp.webcontainer.io/movies/7e3fd5ab-60ff-4ae2-92b6-9597f0308d1
 
-#Recuperar peliculas por género
-https://upgradedumbrella-pnba--1234--7dbe22a9.local-corp.webcontainer.io/movies?genre=terror
+###Recuperar peliculas por género
+https://upgradedumbrella-pnba--1234--7dbe22a9.local-corp.webcontainer.io/movies?genre=drama
