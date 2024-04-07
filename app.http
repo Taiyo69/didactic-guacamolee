@@ -1,8 +1,22 @@
 ###Recuperar peliculas
-https://upgradedumbrella-pnba--1234--7dbe22a9.local-corp.webcontainer.io/movies
+GET https://upgradedumbrella-pnba--1234--7dbe22a9.local-corp.webcontainer.io/movies
 
 ###Recuperar peliculas por ID
-https://upgradedumbrella-pnba--1234--7dbe22a9.local-corp.webcontainer.io/movies/7e3fd5ab-60ff-4ae2-92b6-9597f0308d1
+GET https://upgradedumbrella-pnba--1234--7dbe22a9.local-corp.webcontainer.io/movies/7e3fd5ab-60ff-4ae2-92b6-9597f0308d1
 
 ###Recuperar peliculas por género
-https://upgradedumbrella-pnba--1234--7dbe22a9.local-corp.webcontainer.io/movies?genre=drama
+GET https://upgradedumbrella-pnba--1234--7dbe22a9.local-corp.webcontainer.io/movies?genre=drama
+
+###Crear una pelicula
+POST https://upgradedumbrella-pnba--1234--7dbe22a9.local-corp.webcontainer.io/movies
+Content-Type: application/json
+
+{
+  "title": "Pinocchio",
+  "year": 2023,
+  "director": "Guillermo Del Toro",
+  "duration": 155,
+  "poster": "https://img.fruugo.com/product/0/60/14417600_max.jpg",
+  "genre": ["Action", "Adventure", "Drama"],
+  "rate": 9
+}
