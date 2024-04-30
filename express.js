@@ -32,6 +32,7 @@ app.get('/movies/:id', (req, res) => {
 
 app.post('/movies', (req, res) => {
     const { title, genre, year, director, duration, rate, poster } = req.body
+
     const newMovie = {
         id: crypto.randomUUID(),
         title,
