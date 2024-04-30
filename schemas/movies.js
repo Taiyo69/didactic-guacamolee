@@ -1,17 +1,19 @@
-const z = require('zod')
+const z = require("zod")
 
 const movieSchema = z.object({
     title: z.string(),
-    year: z.number().int().min(1950).max(2024),
+    year: z.number().int().min(1900).max(2024),
     director: z.string(),
     duration: z.number().int().positive(),
     rate: z.number().min(0).max(10),
     poster: z.string().url(),
-    genre: z.array(
-        z.enum(['Action', 'Adventure', 'Horror', 'Comedy', 'Drama'])
-    )
+    genre: z.array(z.enum(['Action', 'Drama', 'Adventure', 'Comedy', 'Fantasy', 'Horror', 'Thriller', 'Sci-Fi'])),
 })
 
 const validateMovie = (object) => {
-    return 
+    return movieSchema.safeParse(object);
+}
+
+module.exports = {
+    validataMovie
 }

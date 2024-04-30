@@ -31,21 +31,16 @@ app.get('/movies/:id', (req, res) => {
 })
 
 app.post('/movies', (req, res) => {
-    const { title, genre, year, director, duration, rate, poster } = req.body
+    const result = validateMovie(req.body)
+
+    if(result.error) {
+        return res.status(400).json({ error: result.error.message })
+    } 
 
     const newMovie = {
         id: crypto.randomUUID(),
-        title,
-        genre,
-        year,
-        director,
-        duration,
-        rate: rate ?? 0,
-        poster
+        ...result
     }
-
-    movies.push(newMovie)
-    res.status(201).json(newMovie)
 })
 
 app.listen(PORT, () => {
