@@ -4,7 +4,7 @@ const app = express()
 
 const PORT = process.env.PORT ?? 1234
 const movies = require('./movies.json')
-const { validateMovie, validatePartialMovie } = require('./schemas/movies')
+const { validateMovie } = require('./schemas/movies')
 
 app.use(express.json())
 app.disable('x-powered-by')
