@@ -1,10 +1,10 @@
 {
-  "name": "upgraded-umbrella",
+  "name": "Didactic-Guacamole-Api",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
   "scripts": {
-    "dev": "node --watch express.js"
+    "dev": "node app.js"
   },
   "keywords": [],
   "author": "",
