@@ -18,11 +18,11 @@ app.get('/', (req, res) => {
 })
 
 app.get('/movies', (req, res) => {
-    const origin = req.header('origin')
+    //const origin = req.header('origin')
 
-    if(ACCEPTED_ORIGINS.includes(origin) || !origin) {
-        res.header('Access-Control-Allow-Origin', origin)
-    }
+    //if(ACCEPTED_ORIGINS.includes(origin) || !origin) {
+        res.header('Access-Control-Allow-Origin', '*')
+    //}
 
     const { genre } = req.query
 
@@ -34,11 +34,11 @@ app.get('/movies', (req, res) => {
 })
 
 app.get('/movies/:id', (req, res) => {
-    const origin = req.header('origin')
+    //const origin = req.header('origin')
 
-    if(ACCEPTED_ORIGINS.includes(origin) || !origin) {
-        res.header('Access-Control-Allow-Origin', origin)
-    }
+    //if(ACCEPTED_ORIGINS.includes(origin) || !origin) {
+        res.header('Access-Control-Allow-Origin', '*')
+    //}
 
     const { id } = req.params
     const movie = movies.find(movie => movie.id === id)
@@ -48,11 +48,11 @@ app.get('/movies/:id', (req, res) => {
 })
 
 app.delete('/movies/:id' , (req, res) => {
-    const origin = req.header('origin')
+    //const origin = req.header('origin')
 
-    if(ACCEPTED_ORIGINS.includes(origin) || !origin) {
-        res.header('Access-Control-Allow-Origin', origin)
-    }
+    //if(ACCEPTED_ORIGINS.includes(origin) || !origin) {
+        res.header('Access-Control-Allow-Origin', '*')
+    //}
 
     const { id } = req.params
     const movieIndex = movies.findIndex(movie => movie.id === id)
@@ -102,13 +102,13 @@ app.patch('/movies/:id', (req, res) => {
 })
 
 app.options('/movies/:id', (req, res) => {
-    const origin = req.header('origin')
+    //const origin = req.header('origin')
 
-    if(ACCEPTED_ORIGINS.includes(origin) || !origin) {
-        res.header('Access-Control-Allow-Origin', origin)
+    //if(ACCEPTED_ORIGINS.includes(origin) || !origin) {
+        res.header('Access-Control-Allow-Origin', '*')
         res.header('Access-Control-Allow-Methods', 'GET, POST, POST, PATCH, DELETE')
-    }
-
+    //}
+    
     res.sendStatus(200)
 })
 
